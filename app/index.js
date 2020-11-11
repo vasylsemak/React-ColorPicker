@@ -11,7 +11,9 @@ class Picker extends React.Component {
 
   handleChange(evt) {
     const color = evt.target.className;
-    this.setState(() => ({ selectedColor: color }));
+    if(!evt.target.matches('#colors-list')) {
+      this.setState(() => ({ selectedColor: color }));
+    }
   }
 
   render() {
