@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// write your Color component here
+import Color from '../components/Color.js';
 
 class Picker extends React.Component {
   render() {
@@ -11,7 +10,11 @@ class Picker extends React.Component {
           <div>Currently selected: </div>
           <div className="red">red</div>
         </div>
-        <div id="colors-list">{/* colors go here */}</div>
+        <div id="colors-list">
+          <Color />
+          <Color />
+          <Color />
+        </div>
       </div>
     );
   }
