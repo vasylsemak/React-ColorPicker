@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default ({ color, selectColor }) => {
+export default ({ color, handleClick, selectedColor }) => {
   return (
-    <div className={color} onClick={() => selectColor(color)} />
+    (color === selectedColor)
+      ? <div className={color + " selected"} onClick={() => handleClick(color)} />
+      : <div className={color} onClick={() => handleClick(color)} />
   )
 }

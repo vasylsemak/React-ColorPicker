@@ -20,12 +20,26 @@ class Picker extends React.Component {
       <div id="container">
         <div id="navbar">
           <div>Currently selected: </div>
-          <div className={this.state.selectedColor}>{this.state.selectedColor}</div>
+          <div
+            className={this.state.selectedColor}>{this.state.selectedColor}
+          </div>
         </div>
         <div id="colors-list">
-          <Color color="red" selectColor={this.handleChange} />
-          <Color color="blue" selectColor={this.handleChange} />
-          <Color color="green" selectColor={this.handleChange} />
+          <Color
+            color="red"
+            selectedColor={this.state.selectedColor}
+            handleClick={this.handleChange}
+          />
+          <Color
+            color="blue"
+            selectedColor={this.state.selectedColor}
+            handleClick={this.handleChange}
+          />
+          <Color
+            color="green"
+            selectedColor={this.state.selectedColor}
+            handleClick={this.handleChange}
+          />
         </div>
       </div>
     );
