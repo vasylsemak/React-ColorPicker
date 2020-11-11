@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default () => {
-  return ( <div className="red" /> )
+export default ({ color, selectColor }) => {
+  return (
+    <div className={color} onClick={() => selectColor(color)} />
+  )
 }
